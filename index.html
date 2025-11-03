@@ -5,7 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Redirecting...</title>
-  <meta name="robots" content="noindex" />
+
+  <!-- Google doit ignorer cette page -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Hreflang signals -->
+  <link rel="alternate" href="https://mano479.github.io/fr/" hreflang="fr" />
+  <link rel="alternate" href="https://mano479.github.io/en/" hreflang="en" />
+  <link rel="alternate" href="https://mano479.github.io/" hreflang="x-default" />
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const lang = navigator.language || navigator.userLanguage;
@@ -20,5 +28,11 @@
 </head>
 <body>
   <p>Redirecting…</p>
+
+  <!-- Fallback if JS disabled -->
+  <noscript>
+    <p><a href="fr/index.html">Accéder en Français</a></p>
+    <p><a href="en/index.html">Access in English</a></p>
+  </noscript>
 </body>
 </html>
