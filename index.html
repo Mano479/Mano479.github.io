@@ -1,38 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redirecting...</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Autorise l'indexation par Google -->
+  <meta name="robots" content="index, follow">
 
-  <!-- Google doit ignorer cette page -->
-  <meta name="robots" content="noindex, nofollow" />
-
-  <!-- Hreflang signals -->
-  <link rel="alternate" href="https://mano479.github.io/fr/" hreflang="fr" />
-  <link rel="alternate" href="https://mano479.github.io/en/" hreflang="en" />
-  <link rel="alternate" href="https://mano479.github.io/" hreflang="x-default" />
+  <title>Redirection...</title>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const lang = navigator.language || navigator.userLanguage;
+    // Détection de la langue du navigateur
+    const userLang = navigator.language || navigator.userLanguage;
 
-      if (lang.toLowerCase().startsWith("fr")) {
-        window.location.replace("fr/index.html");
-      } else {
-        window.location.replace("en/index.html");
-      }
-    });
+    if (userLang.startsWith('fr')) {
+      window.location.replace('/fr/');
+    } else {
+      window.location.replace('/en/');
+    }
   </script>
 </head>
 <body>
-  <p>Redirecting…</p>
-
-  <!-- Fallback if JS disabled -->
-  <noscript>
-    <p><a href="fr/index.html">Accéder en Français</a></p>
-    <p><a href="en/index.html">Access in English</a></p>
-  </noscript>
+  <p>Redirection en cours…</p>
+  <p>Si vous n'êtes pas redirigé automatiquement :</p>
+  <ul>
+    <li><a href="/fr/">Version française</a></li>
+    <li><a href="/en/">English version</a></li>
+  </ul>
 </body>
 </html>
