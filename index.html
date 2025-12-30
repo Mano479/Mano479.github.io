@@ -1,31 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Autorise l'indexation par Google -->
-  <meta name="robots" content="index, follow">
-
-  <title>Redirection...</title>
-
-  <script>
-    // Détection de la langue du navigateur
-    const userLang = navigator.language || navigator.userLanguage;
-
-    if (userLang.startsWith('fr')) {
-      window.location.replace('/fr/');
-    } else {
-      window.location.replace('/en/');
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <p>Redirection en cours…</p>
-  <p>Si vous n'êtes pas redirigé automatiquement :</p>
-  <ul>
-    <li><a href="/fr/">Version française</a></li>
-    <li><a href="/en/">English version</a></li>
-  </ul>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1>Manoa Soupé</h1>
+                <ul>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2>À propos de moi</h2>
+                <p>Bonjour ! Étudiant en LDD1 Informatique Mathématiques à l'université Paris-Saclay, je m’intéresse particulièrement à l’informatique, aux mathématiques et aux nouvelles technologies. Curieux et motivé, je développe des projets personnels afin de renforcer mes compétences et préparer mon avenir académique et professionnel.</p>
+                <img src="./image.jpg" alt="Photo de profil" class="profile-pic">
+                <div class="cv-button">
+                    <a href="CV.pdf" target="_blank">Télécharger mon CV</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Mes Projets</h2>
+                <div class="projects-grid">
+                    <div class="project">
+                        <h3>Projet FAC</h3>
+                        <p>Traitement d'images numérique avec C++</p>
+                        <a href="https://github.com/Mano479/" target="_blank">Voir sur GitHub</a>
+                    </div>
+                    <div class="project">
+                        <h3>Kira</h3>
+                        <p>Bot discord créé il y a quelques temps, pas mis à jour.</p>
+                        <a href="https://github.com/Mano479/Kira" target="_blank">Voir sur GitHub</a>
+                    </div>
+                    <div class="project">
+                        <h3>Jeux (premiers projets)</h3>
+                        <p>Quelques jeux plutôt sympa, réalisé au tout début de mon apprentissage</p>
+                        <a href="https://github.com/Mano479/Jeux" target="_blank">Voir sur GitHub</a>
+                    </div>
+                </div>
+                <div class="see-all-projects">
+                    <a href="https://github.com/Mano479" target="_blank">Voir tous mes projets</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <ul>
+                    <p>N'hésitez pas à me contacter pour discuter de projets ou d'opportunités.</p>
+                    <li>Email: @</li>
+                    <li>GitHub: <a href="https://github.com/Mano479" target="_blank">https://github.com/Mano479</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ;)</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
