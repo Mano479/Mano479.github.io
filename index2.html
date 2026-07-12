@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Constand — Reste constant, deviens plus léger</title>
+  <link rel="stylesheet" href="styles2.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="topbar">
+      <div class="brand">Constand</div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#features">Fonctions</a>
+        <a href="#how">Comment</a>
+        <a href="#download">Téléchargement</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Application pour hommes +40 ans</p>
+          <h1>Reste constant dans tes choix de vie.</h1>
+          <p>Constand t'aide à mieux gérer ton alimentation, ton rythme et ta motivation pour perdre du poids sans te sentir débordé.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#download">Télécharger l'app</a>
+            <a class="btn secondary" href="#features">Découvrir</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="card-glow"></div>
+          <div class="device-mockup">
+            <div class="phone-screen">
+              <div class="phone-header"></div>
+              <div class="stats">
+                <div>
+                  <span>12</span>
+                  <small>Jours consécutifs</small>
+                </div>
+                <div>
+                  <span>84%</span>
+                  <small>Objectifs atteints</small>
+                </div>
+              </div>
+              <div class="progress-wrap">
+                <div class="progress-bar"></div>
+              </div>
+              <p class="screen-text">Rappels, défis simples et suivi quotidien pour rester sur la bonne voie.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section feature-grid" id="features">
+        <div class="section-intro">
+          <p class="eyebrow">Pourquoi Constand</p>
+          <h2>Des outils clairs pour une routine plus solide</h2>
+        </div>
+        <div class="grid">
+          <article class="feature-card">
+            <h3>Plan quotidien</h3>
+            <p>Des actions simples et réalistes pour rester cohérent dans ton alimentation et ton activité.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Motivation durable</h3>
+            <p>Une interface fluide et des rappels doux pour éviter de perdre le rythme.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Statistiques utiles</h3>
+            <p>Visualise ta progression avec des indicateurs adaptés à ton âge et ton objectif.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split" id="how">
+        <div>
+          <p class="eyebrow">Comment ça marche</p>
+          <h2>Concentre-toi sur l'essentiel, sans pression.</h2>
+          <p>Chaque jour, Constand te propose des choix à suivre, un court bilan et des encouragements pour bâtir des habitudes solides et perdre du poids progressivement.</p>
+        </div>
+        <div class="steps">
+          <div class="step-card">
+            <strong>1</strong>
+            <h3>Définis ton cap</h3>
+            <p>Choisis tes priorités, que ce soit manger mieux, bouger plus ou mieux dormir.</p>
+          </div>
+          <div class="step-card">
+            <strong>2</strong>
+            <h3>Agis chaque jour</h3>
+            <p>Petit à petit, chaque décision compte et te rapproche d'une vie plus stable.</p>
+          </div>
+          <div class="step-card">
+            <strong>3</strong>
+            <h3>Reste motivé</h3>
+            <p>Des retours simples pour voir tes progrès et maintenir ton élan.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonials">
+        <div class="section-intro">
+          <p class="eyebrow">Témoignages</p>
+          <h2>Des hommes comme toi ont retrouvé leur équilibre.</h2>
+        </div>
+        <div class="testimonial-grid">
+          <blockquote>
+            « Constand m'a aidé à rester constant sans me stresser. Je me sens plus léger et plus confiant. »
+            <cite>Marc, 45 ans</cite>
+          </blockquote>
+          <blockquote>
+            « L'application est claire, simple et vraiment conçue pour notre rythme. Je l'utilise tous les matins. »
+            <cite>Philippe, 52 ans</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="section download" id="download">
+        <div class="download-copy">
+          <p class="eyebrow">Télécharge maintenant</p>
+          <h2>Prêt à rester constant chaque jour ?</h2>
+          <p>Installe Constand sur ton téléphone et commence à construire des habitudes plus saines dès aujourd'hui.</p>
+          <div class="store-buttons">
+            <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.constand.app" target="_blank" rel="noreferrer">
+              <span>Google Play</span>
+              <small>Télécharger</small>
+            </a>
+            <a class="store-btn" href="https://apps.apple.com/app/id000000000" target="_blank" rel="noreferrer">
+              <span>App Store</span>
+              <small>Télécharger</small>
+            </a>
+          </div>
+        </div>
+        <div class="download-image"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Constand. Pour les hommes de plus de 40 ans qui veulent rester constants.</p>
+    </footer>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
