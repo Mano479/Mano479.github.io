@@ -359,11 +359,41 @@ button, a {
   max-width: 54ch;
 }
 
-.store-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+.waitlist-form {
   margin-top: 32px;
+  display: grid;
+  gap: 18px;
+}
+
+.waitlist-form label {
+  color: #f5f7ff;
+  font-weight: 600;
+}
+
+.waitlist-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: center;
+}
+
+.waitlist-form input {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+
+.waitlist-form input::placeholder {
+  color: rgba(227, 234, 255, 0.55);
+}
+
+.form-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .store-btn {
