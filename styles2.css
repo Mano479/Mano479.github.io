@@ -49,10 +49,11 @@ button, a {
 }
 
 .brand {
-  font-size: 1.4rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: #fff;
 }
 
@@ -316,33 +317,6 @@ button, a {
   margin: 0 0 10px;
 }
 
-.testimonials {
-  background: rgba(255,255,255,0.03);
-  border-radius: 32px;
-  padding: 60px 40px;
-}
-
-.testimonial-grid {
-  display: grid;
-  gap: 24px;
-  margin-top: 32px;
-}
-
-.testimonial-grid blockquote {
-  margin: 0;
-  padding: 28px;
-  border-radius: 28px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  color: #dde2ff;
-}
-
-.testimonial-grid cite {
-  display: block;
-  margin-top: 18px;
-  color: var(--muted);
-}
-
 .download {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -356,6 +330,17 @@ button, a {
 
 .download-copy p {
   color: var(--muted);
+  max-width: 54ch;
+}
+
+.highlight-note {
+  margin: 18px 0 0;
+  color: #eef2ff;
+  font-weight: 600;
+  background: rgba(92,192,255,0.1);
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(92,192,255,0.18);
   max-width: 54ch;
 }
 
