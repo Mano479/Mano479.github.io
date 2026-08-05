@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV — Manoa · Étudiant Développeur</title>
+    <meta name="description" content="CV interactif de Manoa, étudiant en L1 Double Diplôme Informatique & Mathématiques à Paris-Saclay, stagiaire IA à l'ANFSI.">
+    <meta name="theme-color" content="#0B0F17">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="glow-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="brand-logo" aria-label="Retour en haut">
+                <span>Manoa</span><span class="logo-dot">.</span>
+            </a>
+            <nav class="nav-links" id="nav-links" aria-label="Navigation">
+                <a href="#profil" class="nav-link">Profil</a>
+                <a href="#competences" class="nav-link">Compétences</a>
+                <a href="#experience" class="nav-link">Expérience</a>
+                <a href="#formation" class="nav-link">Formation</a>
+                <a href="#projets" class="nav-link">Projets</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Changer de thème">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="CV.pdf" class="btn btn-primary btn-sm" id="download-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    <span>Télécharger</span>
+                </a>
+                <button class="burger-btn" id="burger-btn" aria-label="Menu mobile" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-left animate-on-scroll fade-up">
+                    <div class="hero-photo-wrap">
+                        <img src="../assets/image.jpg" alt="Photo de Manoa" class="hero-photo"/>
+                            <div class="hero-photo-ring"></div>
+                    </div>
+                </div>
+                <div class="hero-content animate-on-scroll fade-up delay-1">
+                    <div class="badge">
+                        <span class="badge-dot"></span>
+                        Disponible pour un stage
+                    </div>
+                    <h1 class="hero-title">
+                        Manoa<br><span class="gradient-text">Développeur &amp; IA</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Étudiant en <strong>L2 Double Diplôme Informatique &amp; Mathématiques</strong> à Paris-Saclay. Passionné par la programmation depuis l'âge de 14 ans.
+                    </p>
+                    <div class="hero-contact">
+                        <a href="mailto:contact@manoasoupe.fr" class="contact-chip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            contact@manoasoupe.fr
+                        </a>
+                        <a href="https://github.com/Mano479" target="_blank" rel="noopener noreferrer" class="contact-chip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                            github.com/Mano479
+                        </a>
+                        <a href="https://manoasoupe.fr" target="_blank" rel="noopener noreferrer" class="contact-chip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                            manoasoupe.fr
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="section profil-section" id="profil">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-up">
+                    <h2 class="section-title">Profil</h2>
+                    <p class="section-subtitle">Qui je suis, ce qui me motive</p>
+                </div>
+                <div class="profil-card glass-card animate-on-scroll fade-up">
+                    <p>
+                        Je m'intéresse à l'informatique depuis l'âge de <strong>14 ans</strong>, en commençant à apprendre la programmation en autodidacte. J'ai eu l'occasion de réaliser de nombreux projets — jeux interactifs en Python, sites web, bots sur différentes plateformes, traitement d'images en C++, applications mobiles avec React Native. Récemment, j'ai effectué un <strong>stage à l'ANFSI</strong> sur l'<strong>optimisation de pipelines RAG</strong> (Retrieval-Augmented Generation), ce qui a renforcé mon intérêt pour l'IA appliquée. Sérieux et curieux, je crois en un numérique <strong>libre</strong>, <strong>respectueux de la vie privée</strong> et <strong>accessible</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section competences-section" id="competences">
+            <div class="container">
+                <div class="section-header text-center animate-on-scroll fade-up">
+                    <h2 class="section-title">Compétences</h2>
+                    <p class="section-subtitle">Ma stack technique</p>
+                </div>
+                <div class="skill-filters animate-on-scroll fade-up" id="skill-filters">
+                    <button class="filter-btn active" data-filter="all">Toutes</button>
+                    <button class="filter-btn" data-filter="langage">Langages</button>
+                    <button class="filter-btn" data-filter="ia">IA / Data</button>
+                    <button class="filter-btn" data-filter="outil">Outils</button>
+                </div>
+                <div class="skills-grid" id="skills-grid">
+                    <div class="skill-card glass-card animate-on-scroll fade-up" data-category="langage">
+                        <span class="skill-icon">🟨</span>
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-sub">Node.js / React</span>
+                        <div class="skill-bar"><span class="skill-fill" data-level="80"></span></div>
+                    </div>
+                    <div class="skill-card glass-card animate-on-scroll fade-up" data-category="langage">
+                        <span class="skill-icon">🐍</span>
+                        <span class="skill-name">Python</span>
+                        <span class="skill-sub">Scripts, IA</span>
+                        <div class="skill-bar"><span class="skill-fill" data-level="78"></span></div>
+                    </div>
+                    <div class="skill-card glass-card animate-on-scroll fade-up" data-category="langage">
+                        <span class="skill-icon">⚙️</span>
+                        <span class="skill-name">C++</span>
+                        <span class="skill-sub">Traitement image</span>
+                        <div class="skill-bar"><span class="skill-fill" data-level="60"></span></div>
+                    </div>
+                    <div class="skill-card glass-card animate-on-scroll fade-up" data-category="langage">
+                        <span class="skill-icon">🗄️</span>
+                        <span class="skill-name">SQL</span>
+                        <span class="skill-sub">Bases</span>
+                        <div class="skill-bar"><span class="skill-fill" data-level="50"></span></div>
+                    </div>
+                    <div class="skill-card glass-card animate-on-scroll fade-up" data-category="langage">
+                        <span class="skill-icon">🌐</span>
+                        <span class="skill-name">HTML / CSS</span>
+                        <span class="skill-sub">Notions</span>
+                        <div class="skill-bar"><span class="skill-fill" data-level="55"></span></div>
+                    </div>
+                    <div class="skill-card glass-card animate-on-scroll fade-up" data-category="ia">
+                        <span class="skill-icon">🤖</span>
+                        <span class="skill-name">RAG</span>
+                        <span class="skill-sub">Optimisation pipeline</span>
+                        <div class="skill-bar"><span class="skill-fill" data-level="72"></span></div>
+                    </div>
+                    <div class="skill-card glass-card animate-on-scroll fade-up" data-category="ia">
+                        <span class="skill-icon">🧠</span>
+                        <span class="skill-name">LLM / IA générative</span>
+                        <span class="skill-sub">Prompting, évaluation</span>
+                        <div class="skill-bar"><span class="skill-fill" data-level="65"></span></div>
+                    </div>
+                    <div class="skill-card glass-card animate-on-scroll fade-up" data-category="outil">
+                        <span class="skill-icon">🐧</span>
+                        <span class="skill-name">Linux</span>
+                        <span class="skill-sub">Utilisation quotidienne</span>
+                        <div class="skill-bar"><span class="skill-fill" data-level="82"></span></div>
+                    </div>
+                    <div class="skill-card glass-card animate-on-scroll fade-up" data-category="outil">
+                        <span class="skill-icon">🐙</span>
+                        <span class="skill-name">Git</span>
+                        <span class="skill-sub">Bases</span>
+                        <div class="skill-bar"><span class="skill-fill" data-level="60"></span></div>
+                    </div>
+                    <div class="skill-card glass-card animate-on-scroll fade-up" data-category="outil">
+                        <span class="skill-icon">🐳</span>
+                        <span class="skill-name">Docker</span>
+                        <span class="skill-sub">Bases</span>
+                        <div class="skill-bar"><span class="skill-fill" data-level="45"></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section experience-section" id="experience">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-up">
+                    <h2 class="section-title">Expérience</h2>
+                    <p class="section-subtitle">Mon parcours</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item glass-card animate-on-scroll fade-up">
+                        <div class="timeline-dot accent"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Mai — Juillet 2026</span>
+                            <div class="timeline-title-row">
+                                <h3 class="timeline-title">Stagiaire IA — ANFSI</h3>
+                                <span class="timeline-badge">Stage</span>
+                            </div>
+                            <p class="timeline-text">
+                                Optimisation de pipelines <strong>RAG (Retrieval-Augmented Generation)</strong> au sein de l'Agence Nationale des Forces de Sécurité Intérieure. Travaux sur l'amélioration de la pertinence des récupérations documentaires, l'évaluation des modèles de langage et la rédaction d'un rapport de stage.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">RAG</span>
+                                <span class="tech-pill">LLM</span>
+                                <span class="tech-pill">IA générative</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item glass-card animate-on-scroll fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2024 — 2025</span>
+                            <div class="timeline-title-row">
+                                <h3 class="timeline-title">Projets académiques — Paris-Saclay</h3>
+                                <span class="timeline-badge secondary">Formation</span>
+                            </div>
+                            <p class="timeline-text">
+                                Algorithmique, structures de données et programmation en Python et C++ dans le cadre du Double Diplôme Informatique-Mathématiques (L1).
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">C++</span>
+                                <span class="tech-pill">Algorithmique</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item glass-card animate-on-scroll fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Depuis 2019</span>
+                            <div class="timeline-title-row">
+                                <h3 class="timeline-title">Développeur autodidacte</h3>
+                                <span class="timeline-badge secondary">Personnel</span>
+                            </div>
+                            <p class="timeline-text">
+                                Apprentissage en autonomie depuis l'âge de 14 ans : jeux Python, sites web, bots multi-plateformes, traitement d'images en C++, applications mobiles React Native.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tech-pill">JavaScript</span>
+                                <span class="tech-pill">React Native</span>
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">C++</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section formation-section" id="formation">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-up">
+                    <h2 class="section-title">Formation</h2>
+                    <p class="section-subtitle">Mon parcours éducatif</p>
+                </div>
+                <div class="formation-grid">
+                    <div class="formation-card glass-card animate-on-scroll fade-up">
+                        <div class="formation-icon">🎓</div>
+                        <div>
+                            <h3 class="formation-title">Double Diplôme Informatique &amp; Mathématiques</h3>
+                            <span class="formation-org">Université Paris-Saclay</span>
+                            <p class="formation-text">L1 — Algorithmique, programmation, bases de données et mathématiques.</p>
+                        </div>
+                    </div>
+                    <div class="formation-card glass-card animate-on-scroll fade-up delay-1">
+                        <div class="formation-icon">📜</div>
+                        <div>
+                            <h3 class="formation-title">Baccalauréat Général</h3>
+                            <span class="formation-org">Mention Très Bien · 2025</span>
+                            <p class="formation-text">Spécialités : Mathématiques, Physique-Chimie et SVT.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="langues-section animate-on-scroll fade-up">
+                    <h3 class="langues-title">Langues</h3>
+                    <div class="langues-grid">
+                        <div class="langue-item"><span class="langue-flag">🇫🇷</span><span class="langue-name">Français</span><span class="langue-level">Langue maternelle</span></div>
+                        <div class="langue-item"><span class="langue-flag">🇬🇧</span><span class="langue-name">Anglais</span><span class="langue-level">Niveau scolaire</span></div>
+                        <div class="langue-item"><span class="langue-flag">🇩🇪</span><span class="langue-name">Allemand</span><span class="langue-level">Niveau scolaire</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section projets-section" id="projets">
+            <div class="container">
+                <div class="section-header text-center animate-on-scroll fade-up">
+                    <h2 class="section-title">Projets</h2>
+                    <p class="section-subtitle">Une sélection de mes réalisations</p>
+                </div>
+                <div class="cv-projects-grid">
+                    <article class="project-card glass-card animate-on-scroll fade-up">
+                        <div class="project-tag ai-tag">Stage IA</div>
+                        <h3 class="project-title">Optimisation RAG — ANFSI</h3>
+                        <p class="project-description">
+                            Amélioration des pipelines de Retrieval-Augmented Generation pour des systèmes de recherche documentaire institutionnels. Évaluation de modèles LLM et rédaction d'un rapport de stage.
+                        </p>
+                        <div class="project-tech-list">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">RAG</span>
+                            <span class="tech-pill">LLM</span>
+                            <span class="tech-pill">NLP</span>
+                        </div>
+                    </article>
+                    <article class="project-card glass-card animate-on-scroll fade-up delay-1">
+                        <div class="project-tag">Projet Personnel</div>
+                        <h3 class="project-title">Applications mobiles</h3>
+                        <p class="project-description">
+                            Développement d'applications mobiles avec React Native. Interfaces utilisateur, gestion d'état et intégration d'API.
+                        </p>
+                        <div class="project-tech-list">
+                            <span class="tech-pill">React Native</span>
+                            <span class="tech-pill">JavaScript</span>
+                            <span class="tech-pill">Node.js</span>
+                        </div>
+                        <a href="https://github.com/Mano479" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+                    </article>
+                    <article class="project-card glass-card animate-on-scroll fade-up">
+                        <div class="project-tag">Projet Personnel</div>
+                        <h3 class="project-title">Traitement d'images C++</h3>
+                        <p class="project-description">
+                            Algorithmes de traitement d'images numériques implémentés en C++ : filtres, transformations et manipulation de pixels.
+                        </p>
+                        <div class="project-tech-list">
+                            <span class="tech-pill">C++</span>
+                            <span class="tech-pill">Traitement image</span>
+                        </div>
+                        <a href="https://github.com/Mano479" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+                    </article>
+                    <article class="project-card glass-card animate-on-scroll fade-up delay-1">
+                        <div class="project-tag">Académique</div>
+                        <h3 class="project-title">Projets Paris-Saclay</h3>
+                        <p class="project-description">
+                            Algorithmes, structures de données et projets de programmation réalisés en L1 Double Diplôme Informatique-Mathématiques.
+                        </p>
+                        <div class="project-tech-list">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">C++</span>
+                            <span class="tech-pill">Algorithmique</span>
+                        </div>
+                        <a href="https://github.com/Mano479" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section interets-section" id="interets">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-up">
+                    <h2 class="section-title">Centres d'intérêt</h2>
+                    <p class="section-subtitle">Au-delà du code</p>
+                </div>
+                <div class="interets-grid">
+                    <div class="interet-card glass-card animate-on-scroll fade-up">
+                        <span class="interet-icon">🤺</span>
+                        <div>
+                            <h3 class="interet-title">Escrime</h3>
+                            <p class="interet-text">8 années à un niveau national, participation à une compétition internationale.</p>
+                        </div>
+                    </div>
+                    <div class="interet-card glass-card animate-on-scroll fade-up delay-1">
+                        <span class="interet-icon">🏋️</span>
+                        <div>
+                            <h3 class="interet-title">Musculation</h3>
+                            <p class="interet-text">Pratique régulière, discipline et constance.</p>
+                        </div>
+                    </div>
+                    <div class="interet-card glass-card animate-on-scroll fade-up delay-2">
+                        <span class="interet-icon">🏓</span>
+                        <div>
+                            <h3 class="interet-title">Tennis de table</h3>
+                            <p class="interet-text">Pratique régulière.</p>
+                        </div>
+                    </div>
+                    <div class="interet-card glass-card animate-on-scroll fade-up">
+                        <span class="interet-icon">📚</span>
+                        <div>
+                            <h3 class="interet-title">Lecture</h3>
+                            <p class="interet-text">Passion pour les livres depuis toujours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="footer-text">CV interactif · Manoa</p>
+            <p class="footer-copy">&copy; 2026 Manoa. Fait avec curiosité.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
