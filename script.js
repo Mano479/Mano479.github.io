@@ -1,35 +1,58 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+const navLinks = document.getElementById('navLinks');
+const menuToggle = document.getElementById('menuToggle');
+const yearEl = document.getElementById('year');
+const languageButtons = document.querySelectorAll('[data-lang]');
+
+function setLanguage(language) {
+  const root = document.documentElement;
+  const body = document.body;
+  const buttons = languageButtons;
+
+  if (!body || !root) return;
+
+  body.classList.remove('lang-en', 'lang-fr');
+  body.classList.add(`lang-${language}`);
+  root.setAttribute('lang', language);
+  localStorage.setItem('siteLanguage', language);
+
+  buttons.forEach((button) => {
+    const lang = button.getAttribute('data-lang');
+    button.classList.toggle('active', lang === language);
+  });
+
+  // Update dynamic placeholders for language-dependent inputs
+  document.querySelectorAll('[data-' + language + '-placeholder]').forEach((input) => {
+    input.placeholder = input.getAttribute('data-' + language + '-placeholder');
+  });
+}
+
+function initializeLanguageSwitcher() {
+  const storedLanguage = localStorage.getItem('siteLanguage');
+  const defaultLanguage = storedLanguage === 'en' ? 'en' : 'fr';
+
+  setLanguage(defaultLanguage);
+
+  languageButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const chosenLanguage = button.getAttribute('data-lang');
+      if (chosenLanguage) setLanguage(chosenLanguage);
     });
+  });
+}
+
+function initializeMenu() {
+  // Menu toggle button is disabled on mobile — navigation links are always visible.
+}
+
+function initializeYear() {
+  if (!yearEl) return;
+  yearEl.textContent = new Date().getFullYear();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initializeLanguageSwitcher();
+  initializeMenu();
+  initializeYear();
 });
 
-// Fade-in animation for sections on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
-});
+// Menu toggle disabled on mobile — no resize handler needed.
